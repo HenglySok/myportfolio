@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+    /* Primary: Deep, commanding dark navy blue */
+    --color-primary: #0a192f;
+
+    /* Secondary / Accent: Electric Cyan/Teal */
+    --color-secondary: #00f2fe;
+
+    /* Accent / Warning / Highlight: Soft Purple/Indigo */
+    --color-accent: #818cf8;
+    --color-accent-blue: #25a0ff;
+
+    /* Surface: A slightly lighter dark-blue for cards */
+    --color-surface: #112240;
+    --color-surface-hover: #233554;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base resets mapped to your theme rules */
+html,
+body {
+    @apply bg-primary text-slate-100 antialiased;
+}
