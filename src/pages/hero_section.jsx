@@ -41,7 +41,7 @@ function HeroSection() {
                     {/* Modern View Projects Button: Clean, glowing outline with low-opacity backdrop hover */}
                     <button
                         onClick={() => {
-                            document.getElementById('project')?.scrollIntoView({ behavior: 'smooth' });
+                            document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
                         }}
                         className="px-8 py-3 border border-[#00f2fe]/40 text-[#00f2fe] font-semibold rounded-full hover:bg-[#00f2fe]/10 hover:border-[#00f2fe] transition-all active:scale-98 cursor-pointer">
                         View Projects
