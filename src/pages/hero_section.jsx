@@ -30,12 +30,16 @@ function HeroSection() {
                 {/* Action Buttons */}
                 <div className="flex items-center gap-4 pt-4">
                     {/* Modern Contact Me Button: Fades cleanly into the deep #030712 surface */}
-                    <button className="px-8 py-3 bg-linear-to-r from-[#00f2fe] to-indigo-700  font-bold rounded-full hover:brightness-120 transition-all shadow-lg shadow-[#00f2fe]/10 active:scale-98 cursor-pointer">
+                    <button
+                        onclick={() => window.location.href = '#contact'}
+                        className="px-8 py-3 bg-linear-to-r from-[#00f2fe] to-indigo-700  font-bold rounded-full hover:brightness-120 transition-all shadow-lg shadow-[#00f2fe]/10 active:scale-98 cursor-pointer">
                         Contact Me
                     </button>
 
                     {/* Modern View Projects Button: Clean, glowing outline with low-opacity backdrop hover */}
-                    <button className="px-8 py-3 border border-[#00f2fe]/40 text-[#00f2fe] font-semibold rounded-full hover:bg-[#00f2fe]/10 hover:border-[#00f2fe] transition-all active:scale-98 cursor-pointer">
+                    <button
+                        onclick={() => window.location.href = '#projects'}
+                        className="px-8 py-3 border border-[#00f2fe]/40 text-[#00f2fe] font-semibold rounded-full hover:bg-[#00f2fe]/10 hover:border-[#00f2fe] transition-all active:scale-98 cursor-pointer">
                         View Projects
                     </button>
                 </div>
