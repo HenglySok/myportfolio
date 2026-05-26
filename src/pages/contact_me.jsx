@@ -1,15 +1,16 @@
+import { toast, Toaster } from 'react-hot-toast'; // 1. Import the toast utilities
+
 function ContactMe() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // 1. Instantly gather data from the form fields using the native API
         const formData = new FormData(e.currentTarget);
-
-        // 2. Replace the string below with your real Web3Forms Access Key
         formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
 
+        // Optional: Show a loading state while processing
+        const loadingToast = toast.loading("Sending your message...");
+
         try {
-            // 3. Dispatch the payload straight to the serverless pipeline API
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 body: formData
@@ -17,20 +18,39 @@ function ContactMe() {
 
             const resData = await response.json();
 
+            // Dismiss the loading toast before showing the result
+            toast.dismiss(loadingToast);
+
             if (resData.success) {
-                alert("Message sent successfully!");
-                e.target.reset(); // Safely clear all inputs natively
+                // 2. Beautiful Success Toast
+                toast.success("Message sent successfully!", {
+                    duration: 4000,
+                    position: "top-center",
+                });
+                e.target.reset();
             } else {
-                alert("Something went wrong. Please try again.");
+                // 2. Beautiful Error Toast
+                toast.error("Something went wrong. Please try again.");
             }
         } catch (error) {
             console.error("Submission Error:", error);
-            alert("Network error. Please check your internet connection.");
+            toast.dismiss(loadingToast);
+            toast.error("Network error. Please check your internet connection.");
         }
     };
 
     return (
         <section id="contact" className="px-6 py-20 md:px-16 lg:px-24 min-h-screen text-white font-sans flex items-center justify-center">
+
+            {/* 3. Add the Toaster component somewhere inside your JSX */}
+            <Toaster toastOptions={{
+                style: {
+                    background: '#111c2e',
+                    color: '#fff',
+                    border: '1px solid rgba(148, 163, 184, 0.2)',
+                },
+            }} />
+
             <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
 
                 {/* Left Column: Contact Info */}
