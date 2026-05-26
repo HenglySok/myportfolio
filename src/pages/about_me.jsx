@@ -1,3 +1,5 @@
+import { href } from "react-router-dom";
+
 function AboutMe() {
     return (
         // Matches your main midnight background (#0b111e)
@@ -50,12 +52,19 @@ function AboutMe() {
                 {/* Modern Action Buttons */}
                 <div className="flex items-center gap-4 pt-6">
                     {/* Modern Gradient Button */}
-                    <button className="px-7 py-3 bg-linear-to-r from-[#00f2fe] to-[#7036e3] text-white font-bold text-sm rounded-full hover:brightness-110 shadow-lg shadow-[#00f2fe]/10 transition-all active:scale-98 cursor-pointer">
+                    <button
+                        onClick={() => window.open("https://drive.usercontent.google.com/download?id=137H16Z2gBp__IO-en1yJpb5265vMFlJK&export=download&authuser=0&confirm=t&uuid=c24de31e-4c85-4a42-b874-3e141f355da1&at=ALBwUgkQttHNbF4Kzc9CHVdfZ0c6:1779819256245", "_blank")}
+                        className="px-7 py-3 bg-linear-to-r from-[#00f2fe] to-[#7036e3] text-white font-bold text-sm rounded-full hover:brightness-110 shadow-lg shadow-[#00f2fe]/10 transition-all active:scale-98 cursor-pointer"
+                    >
                         Download CV
                     </button>
 
                     {/* Modern Outline Button fading into background on right */}
-                    <button className="px-8 py-3 border border-[#00f2fe]/40 text-[#00f2fe] font-semibold rounded-full hover:bg-[#00f2fe]/10 hover:border-[#00f2fe] transition-all active:scale-98 cursor-pointer">
+                    <button
+                        onClick={() => {
+                            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="px-8 py-3 border border-[#00f2fe]/40 text-[#00f2fe] font-semibold rounded-full hover:bg-[#00f2fe]/10 hover:border-[#00f2fe] transition-all active:scale-98 cursor-pointer">
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-white to-[#00f2fe]">
                             Contact Me
                         </span>
