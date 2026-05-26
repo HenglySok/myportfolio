@@ -1,5 +1,3 @@
-import { href } from "react-router-dom";
-
 function AboutMe() {
     return (
         // Matches your main midnight background (#0b111e)
@@ -12,7 +10,7 @@ function AboutMe() {
 
                 <img
                     className="relative w-full max-w-[320px] md:max-w-[380px] h-auto rounded-2xl object-cover border border-slate-800 shadow-2xl"
-                    src="/public/hengly.png"
+                    src="/hengly.png"
                     alt="Sok Hengly Profile"
                 />
             </div>

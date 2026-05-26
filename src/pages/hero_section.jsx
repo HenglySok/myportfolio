@@ -31,14 +31,18 @@ function HeroSection() {
                 <div className="flex items-center gap-4 pt-4">
                     {/* Modern Contact Me Button: Fades cleanly into the deep #030712 surface */}
                     <button
-                        onclick={() => window.location.href = '#contact'}
+                        onClick={() => {
+                            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
                         className="px-8 py-3 bg-linear-to-r from-[#00f2fe] to-indigo-700  font-bold rounded-full hover:brightness-120 transition-all shadow-lg shadow-[#00f2fe]/10 active:scale-98 cursor-pointer">
                         Contact Me
                     </button>
 
                     {/* Modern View Projects Button: Clean, glowing outline with low-opacity backdrop hover */}
                     <button
-                        onclick={() => window.location.href = '#projects'}
+                        onClick={() => {
+                            document.getElementById('project')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
                         className="px-8 py-3 border border-[#00f2fe]/40 text-[#00f2fe] font-semibold rounded-full hover:bg-[#00f2fe]/10 hover:border-[#00f2fe] transition-all active:scale-98 cursor-pointer">
                         View Projects
                     </button>
@@ -54,7 +58,7 @@ function HeroSection() {
                 <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border border-slate-700 bg-[#0b111e] shadow-2xl">
                     <img
                         className="w-full h-full object-cover brightness-95 contrast-105 mix-blend-lighten"
-                        src="/public/hengly_free.png"
+                        src="/hengly_free.png"
                         alt="Sok Hengly Profile"
                     />
                 </div>
