@@ -12,7 +12,7 @@ function AboutMe() {
 
                 <img
                     className="relative w-full max-w-[320px] md:max-w-[380px] h-auto rounded-2xl object-cover border border-slate-800 shadow-2xl"
-                    src="/src/assets/hengly.png"
+                    src="/public/hengly.png"
                     alt="Sok Hengly Profile"
                 />
             </div>

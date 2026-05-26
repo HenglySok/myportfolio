@@ -50,7 +50,7 @@ function HeroSection() {
                 <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border border-slate-700 bg-[#0b111e] shadow-2xl">
                     <img
                         className="w-full h-full object-cover brightness-95 contrast-105 mix-blend-lighten"
-                        src="/src/assets/hengly_free.png"
+                        src="/public/hengly_free.png"
                         alt="Sok Hengly Profile"
                     />
                 </div>
