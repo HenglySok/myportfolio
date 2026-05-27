@@ -85,7 +85,7 @@ function HeroSection() {
     };
 
     return (
-        <div id="home animate-fade-in" className="flex flex-col md:flex-row items-center justify-center gap-16 min-h-screen px-6 md:px-20 text-white font-sans selection:bg-[#00f2fe]/30 overflow-hidden">
+        <div id="home" className="animate-fade-in flex flex-col md:flex-row items-center justify-center gap-16 min-h-screen px-6 md:px-20 text-white font-sans selection:bg-[#00f2fe]/30 overflow-hidden">
 
             {/* Left Column: Text Content and Action Buttons */}
             <motion.div
